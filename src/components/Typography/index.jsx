@@ -11,11 +11,12 @@ export const Typography = ({ children, type = "text-uppercase" }) => {
         <Styled.MainType>{children}</Styled.MainType>
       )}
       {type === "title" && <Styled.TitleType>{children}</Styled.TitleType>}
+      {type === "button" && <Styled.ButtonType>{children}</Styled.ButtonType>}
     </Styled.Container>
   );
 };
 
 Typography.propTypes = {
-  type: P.oneOf(["text-uppercase", "title", "text"]),
+  type: P.oneOf(["text-uppercase", "title", "button"]),
   children: P.string.isRequired,
 };

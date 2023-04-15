@@ -20,5 +20,11 @@ export const TitleType = styled.h1`
   &::first-letter{
     font-size: 4.5rem;
   }
+`
 
+export const ButtonType = styled.p`
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
 `

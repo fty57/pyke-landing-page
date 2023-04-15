@@ -5,8 +5,9 @@ export const Container = styled.div`
   height: 0.1875rem;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 1rem 0;
 `;
+
 export const Divider = styled.hr`
   width: 35%;
   background-color: #fff;
