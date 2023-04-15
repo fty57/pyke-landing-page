@@ -5,7 +5,7 @@ export const Container = styled.div`
 ${({ theme }) => css`
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
 `}
 `
@@ -42,5 +42,6 @@ export const BackgroundOverlay = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 0.25;
+  background-color: ${props => props.bgColor};
 `;

@@ -28,3 +28,10 @@ export const ButtonType = styled.p`
   font-weight: 500;
   text-transform: capitalize;
 `
+
+export const TextTitle = styled.h2`
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+`
