@@ -1,5 +1,6 @@
 import { theme } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
+import cards from "../utils/mock-cards";
 
 import { Button } from "../components/Button";
 import { Divider } from "../components/Divider";
@@ -9,6 +10,7 @@ import { AccountCard } from "../components/AccountCard";
 import { TopContainer } from "../components/TopContainer";
 import { SectionContainer } from "../components/SectionContainer";
 import { BackgroundContainer } from "../components/BackgroundContainer";
+import { AccountContainer } from "../components/AccountContainer";
 
 export default function Home() {
   return (
@@ -31,13 +33,23 @@ export default function Home() {
           </BackgroundContainer>
         </SectionContainer>
         <SectionContainer>
-          <Typography type="text-uppercase">Choose Your Account</Typography>
-          <AccountCard
-            nationality="OCE"
-            price="49.99"
-            description="We understand the concept of the concept"
-            bgColor="#FF0000"
-          />
+          <Typography type="text">Choose Your Account</Typography>
+          <AccountContainer>
+            {cards.map(
+              ({ imgUrl, nationality, price, description, bgColor }, index) => {
+                return (
+                  <AccountCard
+                    imgUrl={imgUrl}
+                    nationality={nationality}
+                    price={price}
+                    description={description}
+                    bgColor={bgColor}
+                    key={index}
+                  />
+                );
+              }
+            )}
+          </AccountContainer>
         </SectionContainer>
       </ThemeProvider>
     </>

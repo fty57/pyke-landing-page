@@ -2,17 +2,21 @@ import P from "prop-types";
 import * as Styled from "./styles";
 
 import { Button } from "../Button";
+import { Accordion } from "../Accordion";
 import { Typography } from "../Typography";
 import { BackgroundContainer } from "../BackgroundContainer";
 
-export const AccountCard = ({ price, nationality, description, bgColor }) => {
+export const AccountCard = ({
+  price,
+  nationality,
+  description,
+  bgColor,
+  imgUrl,
+}) => {
   return (
     <Styled.Container>
       <Styled.Card>
-        <BackgroundContainer
-          imgUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kennen_6.jpg"
-          bgColor={bgColor}
-        >
+        <BackgroundContainer imgUrl={imgUrl} bgColor={bgColor}>
           <div
             style={{
               width: "100%",
@@ -34,12 +38,16 @@ export const AccountCard = ({ price, nationality, description, bgColor }) => {
             </Styled.ButtonContainer>
           </div>
         </BackgroundContainer>
+        <Accordion title="Detailed information">
+          <Typography type="card">{description}</Typography>
+        </Accordion>
       </Styled.Card>
     </Styled.Container>
   );
 };
 
 AccountCard.propTypes = {
+  imgUrl: P.string.isRequired,
   price: P.string.isRequired,
   nationality: P.string.isRequired,
   description: P.string.isRequired,

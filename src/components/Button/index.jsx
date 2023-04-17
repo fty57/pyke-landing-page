@@ -14,5 +14,5 @@ export const Button = ({ children, size }) => {
 
 Button.propTypes = {
   children: P.node.isRequired,
-  size: P.arrayOf(["small", "medium"]),
+  size: P.oneOf(["small", "medium"]),
 };

@@ -35,3 +35,9 @@ export const TextTitle = styled.h2`
   font-weight: 500;
   text-transform: capitalize;
 `
+
+export const CardType = styled.h3`
+  color: ${({ active }) => (active ? "#20dce4" : "#fff")};
+  font-size: 16px;
+  font-weight: 500;
+`

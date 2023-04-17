@@ -8,6 +8,7 @@ export const Typography = ({
   children,
   type = "text-uppercase",
   className,
+  active,
 }) => {
   return (
     <Styled.Container className={work_sans.className}>
@@ -19,12 +20,16 @@ export const Typography = ({
         <Styled.ButtonType className="hoverable">{children}</Styled.ButtonType>
       )}
       {type === "text" && <Styled.TextTitle>{children}</Styled.TextTitle>}
+      {type === "card" && (
+        <Styled.CardType active={active}>{children}</Styled.CardType>
+      )}
     </Styled.Container>
   );
 };
 
 Typography.propTypes = {
-  type: P.oneOf(["text-uppercase", "title", "button", "text"]),
+  type: P.oneOf(["text-uppercase", "title", "button", "text", "card"]),
   children: P.string.isRequired,
   className: P.string,
+  active: P.bool,
 };
