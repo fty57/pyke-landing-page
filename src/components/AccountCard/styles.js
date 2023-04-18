@@ -6,9 +6,8 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   ${({ price, nationality, description }) => css`
-    width: 400px;
-    height: 270px;
-    background-color: blue;
+    width: 25rem;
+    background-color: #282424;
   `}
 `
 

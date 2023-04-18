@@ -16,7 +16,7 @@ export const AccountCard = ({
   return (
     <Styled.Container>
       <Styled.Card>
-        <BackgroundContainer imgUrl={imgUrl} bgColor={bgColor}>
+        <BackgroundContainer imgUrl={imgUrl} bgColor={bgColor} height="17rem">
           <div
             style={{
               width: "100%",
