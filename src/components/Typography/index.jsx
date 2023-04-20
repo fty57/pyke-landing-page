@@ -29,7 +29,7 @@ export const Typography = ({
 
 Typography.propTypes = {
   type: P.oneOf(["text-uppercase", "title", "button", "text", "card"]),
-  children: P.string.isRequired,
+  children: P.node,
   className: P.string,
   active: P.bool,
 };

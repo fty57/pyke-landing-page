@@ -4,21 +4,21 @@ import { theme } from '../../styles/theme'
 export const Container = styled.div`
 ${({ theme }) => css`
   z-index: 1;
-  width: 100%;
+  width: ${props => props.width};
   height: ${props => props.height};
   position: relative;
 `}
 `
 
 export const BackgroundImage = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, shadowEffect }) => css`
   z-index: -1;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   background-image: url(${props => props.imgUrl});
-  box-shadow: inset 0px 20px 20px 20px rgba(0,0,0,0.5);
+  box-shadow: ${shadowEffect ? "inset 0px 25px 100px 100px rgba(0,0,0, 1)" : "inset 0px 20px 20px 20px rgba(0,0,0,0.5)"}
   `}
 `;
 
@@ -42,6 +42,6 @@ export const BackgroundOverlay = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.25;
+  opacity: ${props => props.opacity};
   background-color: ${props => props.bgColor};
 `;

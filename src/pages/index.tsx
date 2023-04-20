@@ -21,6 +21,8 @@ export default function Home() {
         <TopContainer />
         <SectionContainer>
           <BackgroundContainer
+            opacity="0.25"
+            width="100%"
             height="50rem"
             imgUrl="https://i.pinimg.com/originals/fa/e1/1a/fae11a396752675907689eb268785a9a.png"
             bgColor="#000"
@@ -62,6 +64,9 @@ export default function Home() {
             accounts you receive.
           </Typography>
           <BackgroundContainer
+            shadowEffect
+            opacity="0.75"
+            width="70%"
             height="50rem"
             imgUrl="https://img2.wallpaperscreen.com/wp/7s/6/kda-akali-neon-mask-lol-league-of-legends-s763-medium.jpg"
             bgColor="#000"
