@@ -41,3 +41,10 @@ export const CardType = styled.h3`
   font-size: 16px;
   font-weight: 500;
 `
+
+export const QualityType = styled.h3`
+  color: #20dce4;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+`

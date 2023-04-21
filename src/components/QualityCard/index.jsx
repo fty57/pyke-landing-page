@@ -9,9 +9,18 @@ import { BackgroundContainer } from "../BackgroundContainer";
 export const QualityCard = ({ title, imgUrl, description }) => {
   return (
     <Styled.Container>
-      <h1>{title}</h1>
-      <h2>{imgUrl}</h2>
-      <h3>{description}</h3>
+      <Styled.ImageContainer>
+        <Styled.ImageCard imgUrl={imgUrl} />
+        <Styled.Dot />
+      </Styled.ImageContainer>
+      <Styled.TextContainer>
+        <div style={{ padding: "20px 20px 0px 20px" }}>
+          <Typography type="quality-card">{title}</Typography>
+        </div>
+        <div style={{ padding: "20px" }}>
+          <Typography type="card">{description}</Typography>
+        </div>
+      </Styled.TextContainer>
     </Styled.Container>
   );
 };

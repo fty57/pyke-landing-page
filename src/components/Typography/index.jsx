@@ -23,12 +23,22 @@ export const Typography = ({
       {type === "card" && (
         <Styled.CardType active={active}>{children}</Styled.CardType>
       )}
+      {type === "quality-card" && (
+        <Styled.QualityType>{children}</Styled.QualityType>
+      )}
     </Styled.Container>
   );
 };
 
 Typography.propTypes = {
-  type: P.oneOf(["text-uppercase", "title", "button", "text", "card"]),
+  type: P.oneOf([
+    "text-uppercase",
+    "title",
+    "button",
+    "text",
+    "card",
+    "quality-card",
+  ]),
   children: P.node,
   className: P.string,
   active: P.bool,

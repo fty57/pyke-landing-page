@@ -1,6 +1,7 @@
 import { theme } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
 import cards from "../utils/mock-cards";
+import qualityCards from "../utils/mock-quality-cards";
 
 import { Button } from "../components/Button";
 import { Divider } from "../components/Divider";
@@ -11,6 +12,7 @@ import { TopContainer } from "../components/TopContainer";
 import { SectionContainer } from "../components/SectionContainer";
 import { BackgroundContainer } from "../components/BackgroundContainer";
 import { AccountContainer } from "../components/AccountContainer";
+import { QualityContainer } from "../components/QualityContainer";
 
 import { QualityCard } from "../components/QualityCard";
 
@@ -66,17 +68,27 @@ export default function Home() {
           <BackgroundContainer
             shadowEffect
             opacity="0.75"
-            width="70%"
+            width="90%"
             height="50rem"
             imgUrl="https://img2.wallpaperscreen.com/wp/7s/6/kda-akali-neon-mask-lol-league-of-legends-s763-medium.jpg"
             bgColor="#000"
           >
-            <QualityCard
-              title="Oi"
-              imgUrl="https://img2.wallpaperscreen.com/wp/"
-              description="OI"
-            />
+            <QualityContainer>
+              {qualityCards.map(({ title, imgUrl, description }, index) => {
+                return (
+                  <QualityCard
+                    imgUrl={imgUrl}
+                    title={title}
+                    description={description}
+                    key={index}
+                  />
+                );
+              })}
+            </QualityContainer>
           </BackgroundContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <Typography type="text">Why Buy League of Legends Account</Typography>
         </SectionContainer>
       </ThemeProvider>
     </>
