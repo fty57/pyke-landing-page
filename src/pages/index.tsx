@@ -11,6 +11,8 @@ import { AccountCard } from "../components/AccountCard";
 import { TopContainer } from "../components/TopContainer";
 import { SectionContainer } from "../components/SectionContainer";
 import { BackgroundContainer } from "../components/BackgroundContainer";
+
+import { ColumnText } from "../components/ColumnText";
 import { AccountContainer } from "../components/AccountContainer";
 import { QualityContainer } from "../components/QualityContainer";
 
@@ -89,6 +91,49 @@ export default function Home() {
         </SectionContainer>
         <SectionContainer>
           <Typography type="text">Why Buy League of Legends Account</Typography>
+          <div style={{ width: "100%", height: "100%", display: "flex" }}>
+            <BackgroundContainer
+              shadowEffect
+              opacity="0.25"
+              width="150%"
+              height="40rem"
+              imgUrl="https://static1-br.millenium.gg/entity_articles/7/67/97/@/142281-imagem-2022-11-09-100952311-full-1.png"
+              bgColor="#000"
+            />
+            <ColumnText title="STILL UNDECIDED ?">
+              <Typography type="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                odio placeat minima, unde quis sit et assumenda, consectetur
+                deleniti tenetur aliquid corrupti vel at voluptates maxime
+                provident impedit, dignissimos repellat.
+              </Typography>
+              <Typography type="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                odio placeat minima, unde quis sit et assumenda, consectetur
+                deleniti tenetur aliquid corrupti vel at voluptates maxime
+                provident impedit, dignissimos repellat.
+              </Typography>
+              <Typography type="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                odio placeat minima, unde quis sit et assumenda, consectetur
+                deleniti tenetur aliquid corrupti vel at voluptates maxime
+                provident impedit, dignissimos repellat.
+              </Typography>
+              <Divider width="100%" />
+              <Typography type="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                odio placeat minima, unde quis sit et assumenda, consectetur
+                deleniti tenetur aliquid corrupti vel at voluptates maxime
+                provident impedit, dignissimos repellat.
+              </Typography>
+              <Typography type="card">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                odio placeat minima, unde quis sit et assumenda, consectetur
+                deleniti tenetur aliquid corrupti vel at voluptates maxime
+                provident impedit, dignissimos repellat.
+              </Typography>
+            </ColumnText>
+          </div>
         </SectionContainer>
       </ThemeProvider>
     </>

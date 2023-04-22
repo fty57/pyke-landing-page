@@ -9,7 +9,9 @@ export const Container = styled.div`
 `;
 
 export const Divider = styled.hr`
-  width: 35%;
+  ${({ width }) => css`  
+  width: ${width ? width : '35%'};
   background-color: #fff;
   border-radius: 25px;
+  `}
 `
