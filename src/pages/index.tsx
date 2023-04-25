@@ -17,6 +17,8 @@ import { AccountContainer } from "../components/AccountContainer";
 import { QualityContainer } from "../components/QualityContainer";
 
 import { QualityCard } from "../components/QualityCard";
+import { NameCard } from "../components/NameCard";
+import { NameContainer } from "../components/NameContainer";
 
 export default function Home() {
   return (
@@ -133,6 +135,125 @@ export default function Home() {
                 provident impedit, dignissimos repellat.
               </Typography>
             </ColumnText>
+          </div>
+        </SectionContainer>
+        <SectionContainer>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              gap: "10rem",
+              padding: "3rem 12rem",
+            }}
+          >
+            <div
+              style={{
+                flex: "3",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.5rem",
+              }}
+            >
+              <Typography type="text-uppercase">What</Typography>
+              <Typography type="text">PEOPLE SAY</Typography>
+              <Typography type="text-uppercase">About Us</Typography>
+              <hr
+                style={{
+                  left: 0,
+                  width: "25%",
+                  height: "0.75rem",
+                  backgroundColor: "#b444b3",
+                  border: "0px solid",
+                  borderRadius: "25px",
+                }}
+              />
+              <Typography type="button">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit itaque libero corporis quaerat iusto distinctio
+                voluptatum saepe, voluptas ipsam similique facilis officia
+                quidem voluptatibus dolor, et nobis culpa at sequi.
+              </Typography>
+            </div>
+            <NameContainer>
+              <NameCard title="Rick M">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
+                laboriosam laudantium facere ratione debitis adipisci esse et
+                autem nesciunt labore numquam eos?
+              </NameCard>
+              <NameCard title="Rick M">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
+                laboriosam laudantium facere ratione debitis adipisci esse et
+                autem nesciunt labore numquam eos?
+              </NameCard>
+              <NameCard title="Rick M">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
+                laboriosam laudantium facere ratione debitis adipisci esse et
+                autem nesciunt labore numquam eos?
+              </NameCard>
+            </NameContainer>
+          </div>
+        </SectionContainer>
+        <SectionContainer>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              gap: "0.875rem",
+              paddingBottom: "16rem",
+            }}
+          >
+            <Typography type="text">Subscribe Now</Typography>
+            <div>
+              <Typography type="button">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+                pariatur atque nam, doloremque, fugiat placeat quidem ad totam
+                sapiente dicta inventore eaque! Voluptas, eveniet ipsum
+                explicabo et itaque inventore a?
+              </Typography>
+              <Typography type="button">
+                Subscribe to our new Letter and be the First to Know
+              </Typography>
+            </div>
+            <div
+              style={{
+                position: "relative",
+                display: "inline-block",
+              }}
+            >
+              <input
+                type="email"
+                placeholder="EMAIL"
+                style={{
+                  width: "500px",
+                  border: "0px solid",
+                  padding: "0.6875rem",
+                  borderRadius: "0.25rem",
+                  boxShadow: "inset 0px 0px 20px 20px rgba(40, 36, 36, 0.7)",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  height: "100%",
+                  border: "none",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                }}
+              >
+                <Button size="small">
+                  <Typography type="button">Subscribe</Typography>
+                </Button>
+              </div>
+            </div>
           </div>
         </SectionContainer>
       </ThemeProvider>
