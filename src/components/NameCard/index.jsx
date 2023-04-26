@@ -13,5 +13,5 @@ export const NameCard = ({ title, children }) => {
 
 NameCard.propTypes = {
   title: P.string.isRequired,
-  description: P.node.isRequired,
+  children: P.node.isRequired,
 };

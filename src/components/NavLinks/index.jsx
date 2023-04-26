@@ -1,7 +1,7 @@
 import P from "prop-types";
 import * as Styled from "./styles";
-
 import { MenuLink } from "../MenuLink";
+import { MenuButton } from "../MenuButton";
 
 export const NavLinks = ({ links = [] }) => {
   return (
@@ -9,6 +9,7 @@ export const NavLinks = ({ links = [] }) => {
       {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}
+      <MenuButton />
     </Styled.Container>
   );
 };

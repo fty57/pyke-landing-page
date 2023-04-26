@@ -8,6 +8,7 @@ import { Divider } from "../components/Divider";
 import { Typography } from "../components/Typography";
 import { AccountCard } from "../components/AccountCard";
 
+import { Footer } from "../components/Footer";
 import { TopContainer } from "../components/TopContainer";
 import { SectionContainer } from "../components/SectionContainer";
 import { BackgroundContainer } from "../components/BackgroundContainer";
@@ -256,6 +257,7 @@ export default function Home() {
             </div>
           </div>
         </SectionContainer>
+        <Footer />
       </ThemeProvider>
     </>
   );
