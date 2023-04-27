@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components';
 
 const titleSize = (theme, size) => {
   switch (size) {
+    case 'xxxsmall':
+      return css`font-size: ${theme.fonts.xxxsmall};`
+      break;
+
     case "xxsmall":
       return css`font-size: ${theme.fonts.xxsmall};`
       break;

@@ -35,21 +35,55 @@ export default function Home() {
             imgUrl="https://i.pinimg.com/originals/fa/e1/1a/fae11a396752675907689eb268785a9a.png"
             bgColor="#000"
           >
-            <Typography2 as="h1" size="medium" weight="700">
-              Buy a league of{" "}
+            <Typography2
+              as="h2"
+              size="medium"
+              weight="500"
+              color="whiteColor"
+              uppercase
+            >
+              Buy a league of
             </Typography2>
-            <Typography type="text-uppercase">Buy a league of </Typography>
-            <Typography type="title">Legends Account</Typography>
+            <Typography2
+              as="h2"
+              size="xlarge"
+              weight="600"
+              color="whiteColor"
+              uppercase
+              textShadow="0 0 20px rgba(0, 255, 255, 0.5)"
+              letterSpacing="1rem"
+            >
+              Legends Account
+            </Typography2>
             <Divider />
             <div style={{ padding: "1.25rem" }}>
               <Button size="medium">
-                <Typography type="button">Order Now</Typography>
+                <Typography2
+                  as="h4"
+                  size="xsmall"
+                  weight="500"
+                  color="whiteColor"
+                  capitalize
+                >
+                  Order Now
+                </Typography2>
               </Button>
             </div>
           </BackgroundContainer>
         </SectionContainer>
-        <SectionContainer>
-          <Typography type="text">Choose Your Account</Typography>
+
+        <SectionContainer spacings="medium">
+          <div style={{ marginBottom: "1.75rem" }}>
+            <Typography2
+              as="h2"
+              weight="500"
+              color="whiteColor"
+              size="medium"
+              capitalize
+            >
+              Choose Your Account
+            </Typography2>
+          </div>
           <AccountContainer>
             {cards.map(
               ({ imgUrl, nationality, price, description, bgColor }, index) => {
@@ -67,81 +101,139 @@ export default function Home() {
             )}
           </AccountContainer>
         </SectionContainer>
+
         <SectionContainer>
-          <Typography type="text">Why You Should Buy From Us</Typography>
-          <Typography type="card">
+          <Typography2
+            as="h2"
+            weight="500"
+            color="whiteColor"
+            size="medium"
+            capitalize
+          >
+            Choose Your Account
+          </Typography2>
+          <Typography2
+            as="h2"
+            weight="500"
+            color="whiteColor"
+            size="xsmall"
+            capitalize
+          >
             Here at AsslyELO, we care a lot about quality. We make sure you are
             100% satisfied with our service, from payment to the actual LOL
             accounts you receive.
-          </Typography>
+          </Typography2>
           <BackgroundContainer
             shadowEffect
-            opacity="0.75"
-            width="90%"
-            height="50rem"
-            imgUrl="https://img2.wallpaperscreen.com/wp/7s/6/kda-akali-neon-mask-lol-league-of-legends-s763-medium.jpg"
+            width="100%"
+            height="100%"
+            opacity="0.50"
             bgColor="#000"
+            imgUrl="https://static1-br.millenium.gg/entity_articles/9/67/69/@/135550-splash-art-de-pantheon-cacador-de-dragoes-imagem-riot-gamesdivulgacao-full-1.jpg"
           >
             <QualityContainer>
               {qualityCards.map(({ title, imgUrl, description }, index) => {
                 return (
                   <QualityCard
+                    key={index}
                     imgUrl={imgUrl}
                     title={title}
                     description={description}
-                    key={index}
                   />
                 );
               })}
             </QualityContainer>
           </BackgroundContainer>
         </SectionContainer>
+
         <SectionContainer>
-          <Typography type="text">Why Buy League of Legends Account</Typography>
+          <Typography2
+            as="h2"
+            weight="500"
+            color="whiteColor"
+            size="medium"
+            capitalize
+          >
+            Why Buy League of Legends Account
+          </Typography2>
           <div style={{ width: "100%", height: "100%", display: "flex" }}>
             <BackgroundContainer
               shadowEffect
-              opacity="0.25"
+              opacity="0.75"
               width="150%"
-              height="40rem"
+              height="100%"
               imgUrl="https://static1-br.millenium.gg/entity_articles/7/67/97/@/142281-imagem-2022-11-09-100952311-full-1.png"
               bgColor="#000"
-            />
-            <ColumnText title="STILL UNDECIDED ?">
-              <Typography type="card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                odio placeat minima, unde quis sit et assumenda, consectetur
-                deleniti tenetur aliquid corrupti vel at voluptates maxime
-                provident impedit, dignissimos repellat.
-              </Typography>
-              <Typography type="card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                odio placeat minima, unde quis sit et assumenda, consectetur
-                deleniti tenetur aliquid corrupti vel at voluptates maxime
-                provident impedit, dignissimos repellat.
-              </Typography>
-              <Typography type="card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                odio placeat minima, unde quis sit et assumenda, consectetur
-                deleniti tenetur aliquid corrupti vel at voluptates maxime
-                provident impedit, dignissimos repellat.
-              </Typography>
-              <Divider width="100%" />
-              <Typography type="card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                odio placeat minima, unde quis sit et assumenda, consectetur
-                deleniti tenetur aliquid corrupti vel at voluptates maxime
-                provident impedit, dignissimos repellat.
-              </Typography>
-              <Typography type="card">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                odio placeat minima, unde quis sit et assumenda, consectetur
-                deleniti tenetur aliquid corrupti vel at voluptates maxime
-                provident impedit, dignissimos repellat.
-              </Typography>
-            </ColumnText>
+            >
+              <ColumnText title="STILL UNDECIDED ?">
+                <Typography2
+                  as="p"
+                  color="whiteColor"
+                  size="xsmall"
+                  weight="500"
+                  capitalize
+                >
+                  Because we care about you, we waant to make sure that you know
+                  exactly the benefits whe you buy a League of Legends account.
+                </Typography2>
+                <Typography2
+                  as="p"
+                  color="whiteColor"
+                  size="xsmall"
+                  weight="500"
+                  capitalize
+                >
+                  The most obvious benefit is that you dont have to work your
+                  way up from level 1 to level 30 again. Depending on your
+                  experience and skill, that can take a few days or a couple of
+                  weeks. With a level 30 smurf account, you can jump right into
+                  the action with a high-level account from Day 1.
+                </Typography2>
+                <Typography2
+                  as="p"
+                  color="whiteColor"
+                  size="xsmall"
+                  weight="500"
+                  capitalize
+                >
+                  In League of Legends, the ELO system prevents hight-level
+                  players from fighting alongside low-level players. This means
+                  high-level players cant play with and show the ropes to the
+                  real life friends who are just starting out. But with a
+                  unkanked smurf account, that becoms possible.
+                </Typography2>
+                <Divider />
+                <Typography2
+                  as="p"
+                  color="whiteColor"
+                  size="xsmall"
+                  weight="500"
+                  capitalize
+                >
+                  Experience is the best teacher. Sadly, practice new Champions
+                  and diferentes roles during real matches can become ugly and
+                  will affect your reputation. The soluction? Use a LOL smurf
+                  account to experiment with new Champions, equipment builds,
+                  strategies, and roles.
+                </Typography2>
+                <Typography2
+                  as="p"
+                  color="whiteColor"
+                  size="xsmall"
+                  weight="500"
+                  capitalize
+                >
+                  Lastly, with a level 30 smuth account, you can take a break
+                  from the fience competition in hight ELO and go back to simply
+                  having fun, even if you are playing with and agains
+                  inexperience players. Everyone deserves a breake every now and
+                  then.
+                </Typography2>
+              </ColumnText>
+            </BackgroundContainer>
           </div>
         </SectionContainer>
+
         <SectionContainer>
           <div
             style={{

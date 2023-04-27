@@ -18,6 +18,8 @@ import titleSize from '../../utils/titleSize'
 //   `,
 // };
 
+
+
 const mediaFont = (theme) => css`
   @media ${theme.breakpoints.medium} {
     font-size: ${theme.fonts.xlarge};
@@ -30,10 +32,14 @@ const titleCase = (uppercase, capitalize) => css`
 `;
 
 export const Title = styled.h1`
-  ${({ theme, color, size, uppercase, capitalize, weight }) => css`
+  ${({ theme, color, size, uppercase, capitalize, weight, align, textShadow, letterSpacing }) => css`
     ${colorCase(theme, color)};
     ${titleSize(theme, size)};
     ${titleCase(uppercase, capitalize)};
     font-weight: ${weight};
+    text-align: ${align};
+    letter-spacing: ${letterSpacing};
+    text-shadow: ${textShadow ? textShadow : 'none'};
   `}
 `;
+

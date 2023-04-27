@@ -9,9 +9,12 @@ export const Typography2 = ({
   as = "h1",
   size = "huge",
   weight = "400",
+  align = "center",
   uppercase = false,
   capitalize = false,
   color = "blueColor",
+  letterSpacing = "",
+  textShadow = "",
 }) => {
   return (
     <Styled.Title
@@ -19,8 +22,11 @@ export const Typography2 = ({
       size={size}
       color={color}
       weight={weight}
+      align={align}
       uppercase={uppercase}
       capitalize={capitalize}
+      textShadow={textShadow}
+      letterSpacing={letterSpacing}
       className={work_sans.className}
     >
       {children}
@@ -39,6 +45,7 @@ Typography2.propTypes = {
   ]),
   as: P.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   size: P.oneOf([
+    "xxxsmall",
     "xxsmall",
     "xsmall",
     "small",
@@ -52,4 +59,7 @@ Typography2.propTypes = {
   weight: P.oneOf(["400", "500", "600", "700"]),
   uppercase: P.bool,
   capitalize: P.bool,
+  align: P.string,
+  textShadow: P.string,
+  letterSpacing: P.string,
 };

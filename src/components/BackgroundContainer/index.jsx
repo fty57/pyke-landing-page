@@ -24,8 +24,8 @@ export const BackgroundContainer = ({
 BackgroundContainer.propTypes = {
   width: P.string.isRequired,
   height: P.string.isRequired,
-  children: P.node,
   imgUrl: P.string.isRequired,
+  children: P.node,
   bgColor: P.string,
   shadowEffect: P.bool,
 };

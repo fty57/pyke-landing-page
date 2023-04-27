@@ -1,15 +1,16 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  width: 19rem;
+  width: 20rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 1.5rem;
 `;
 
 export const ImageContainer = styled.div`
-  width: 9.375rem;
-  height: 9.375rem;
+  width: 9rem;
+  height: 9rem;
   margin-bottom: 2rem;
   position: relative;
 `;
@@ -40,11 +41,13 @@ export const ImageCard = styled.div`
 export const TextContainer = styled.div`
   width: 100%;
   display: flex;
-  min-height: 11.875rem;
+  min-height: 11rem;
+  padding: 1.25rem;
   text-align: center;
   align-items: center;
   flex-direction: column;
   background-color: rgba(40, 36, 36, 0.85);
+  gap: 1rem;
 `;
 
 

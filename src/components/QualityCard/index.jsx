@@ -4,6 +4,7 @@ import * as Styled from "./styles";
 import { Button } from "../Button";
 import { Accordion } from "../Accordion";
 import { Typography } from "../Typography";
+import { Typography2 } from "../Typography2";
 import { BackgroundContainer } from "../BackgroundContainer";
 
 export const QualityCard = ({ title, imgUrl, description }) => {
@@ -14,12 +15,25 @@ export const QualityCard = ({ title, imgUrl, description }) => {
         <Styled.Dot />
       </Styled.ImageContainer>
       <Styled.TextContainer>
-        <div style={{ padding: "20px 20px 0px 20px" }}>
-          <Typography type="quality-card">{title}</Typography>
-        </div>
-        <div style={{ padding: "20px" }}>
-          <Typography type="card">{description}</Typography>
-        </div>
+        <Typography2
+          as="h6"
+          color="blueColor"
+          size="xsmall"
+          align="center"
+          weight="500"
+          uppercase
+        >
+          {title}
+        </Typography2>
+        <Typography2
+          as="p"
+          color="whiteColor"
+          size="xxsmall"
+          align="center"
+          weight="500"
+        >
+          {description}
+        </Typography2>
       </Styled.TextContainer>
     </Styled.Container>
   );
