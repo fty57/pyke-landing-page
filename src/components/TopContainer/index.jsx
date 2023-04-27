@@ -1,8 +1,6 @@
 import P from "prop-types";
 import * as Styled from "./styles";
-import { Logo } from "../Logo";
-import { Blog } from "../Blog";
-import { NavLinks } from "../NavLinks";
+import { Menu } from "../Menu";
 
 const links = [
   { children: "Home", link: "#target 1" },
@@ -15,9 +13,7 @@ const links = [
 export const TopContainer = () => {
   return (
     <Styled.Container>
-      <Logo text="ASLLYELO" />
-      <NavLinks links={links} />
-      <Blog text="BLOG" />
+      <Menu links={links} />
     </Styled.Container>
   );
 };

@@ -1,7 +1,35 @@
 export const theme = {
+  colors: {
+    blueColor: '#20dce4',
+    pinkColor: '#b03cac',
+    pinkSubColor: '#e854dc',
+    whiteColor: '#ffffff',
+    blackColor: '#282424',
+  },
+  fonts: {
+    xxsmall: '12px',
+    xsmall: '18px',
+    small: '24px',
+    medium: '2.25rem',
+    large: '3rem',
+    xlarge: '3.75rem',
+    xxlarge: '4.5rem',
+    huge: '5.25rem',
+    xhuge: '6rem',
+  },
   breakpoints: {
     small: '(max-width: 600px)',
     medium: '(max-width: 900px)',
     large: '(max-width: 1200px)',
-  }
+  },
+  spacings: {
+    xsmal: '8rem',
+    small: '1.6rem',
+    medium: '2.4rem',
+    large: '3.2rem',
+    xlarge: '4.0rem',
+    xxlarge: '4.8rem',
+    huge: '5.6rem',
+    xhuge: '6.4rem',
+  },
 }

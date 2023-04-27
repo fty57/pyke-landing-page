@@ -6,6 +6,7 @@ import qualityCards from "../utils/mock-quality-cards";
 import { Button } from "../components/Button";
 import { Divider } from "../components/Divider";
 import { Typography } from "../components/Typography";
+import { Typography2 } from "../components/Typography2";
 import { AccountCard } from "../components/AccountCard";
 
 import { Footer } from "../components/Footer";
@@ -34,6 +35,9 @@ export default function Home() {
             imgUrl="https://i.pinimg.com/originals/fa/e1/1a/fae11a396752675907689eb268785a9a.png"
             bgColor="#000"
           >
+            <Typography2 as="h1" size="medium" weight="700">
+              Buy a league of{" "}
+            </Typography2>
             <Typography type="text-uppercase">Buy a league of </Typography>
             <Typography type="title">Legends Account</Typography>
             <Divider />

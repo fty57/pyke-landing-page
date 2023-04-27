@@ -1,15 +1,20 @@
 import P from "prop-types";
 import * as Styled from "./styles";
 import styled from "styled-components";
-import { Work_Sans } from "@next/font/google";
-
-const work_sans = Work_Sans({ subsets: ["latin"] });
+import { Typography2 } from "../Typography2";
 
 export const Blog = ({ text }) => {
   return (
-    <Styled.Container className={work_sans.className}>
-      <Styled.VerticalRow />
-      <span>{text}</span>
+    <Styled.Container>
+      <Typography2
+        as="h2"
+        weight="500"
+        size="xsmall"
+        color="whiteColor"
+        uppercase
+      >
+        {text}
+      </Typography2>
       <Styled.BlueChat />
     </Styled.Container>
   );

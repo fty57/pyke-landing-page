@@ -1,13 +1,13 @@
 import P from "prop-types";
 import * as Styled from "./styles";
-import { Work_Sans } from "@next/font/google";
-
-const work_sans = Work_Sans({ subsets: ["latin"] });
+import { Typography2 } from "../Typography2";
 
 export const Logo = ({ text }) => {
   return (
-    <Styled.Container className={work_sans.className}>
-      <span>{text}</span>
+    <Styled.Container>
+      <Typography2 color="blueColor" weight="600" size="small" uppercase>
+        {text}
+      </Typography2>
     </Styled.Container>
   );
 };
