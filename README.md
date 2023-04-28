@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Project - Legends Account
+
+This is a personal project for the construction of the website [League Account](https://fty57.github.io/pyke-landing-page/). Practice and dedication through challenges help you improve your coding skills and build realistic and better projects.
 
 ## Getting Started
 
@@ -20,22 +22,34 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Overview
 
-To learn more about Next.js, take a look at the following resources:
+### The challenge
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Users should be able to:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Navigate through the page and use the sticky menu button
+- See the interactive elements that are inside the page
+- Test your responsiveness on a mobile device
+
+### Links
+
+- Live Site URL: [Site](https://fty57.github.io/pyke-landing-page/)
+
+### Screenshot
+![Minha tela](./screenshots/Screenshot_1.png)
+![Minha tela mobile](./screenshots/Screenshot_2.png)
+![Minha tela mobile 2](./screenshots/Screenshot_3.png)
 
 ## References & Material Used
 - [Site Reference](https://www.behance.net/gallery/87871159/League-Of-Legends-Landing-Page)
 - [Art Pyke Used](https://www.behance.net/gallery/77784737/WALLPAPER-PYKE-LEAGUE-OF-LEGENDS)
 - [Others Images](https://br.millenium.gg/)
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Github - [@fty57](https://github.com/fty57)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### What I learned
+
+- I've learned that a project may never be ready before you deploy it, even if you're excited to put it out there and show everyone around. I did, but still needed adjustments. So it's always worth one last code review.
