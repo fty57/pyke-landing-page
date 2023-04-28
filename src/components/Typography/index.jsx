@@ -6,40 +6,60 @@ const work_sans = Work_Sans({ subsets: ["latin"] });
 
 export const Typography = ({
   children,
-  type = "text-uppercase",
-  className,
-  active,
+  as = "h1",
+  size = "huge",
+  weight = "400",
+  align = "center",
+  uppercase = false,
+  capitalize = false,
+  color = "blueColor",
+  letterSpacing = "",
+  textShadow = "",
 }) => {
   return (
-    <Styled.Container className={work_sans.className}>
-      {type === "text-uppercase" && (
-        <Styled.MainType>{children}</Styled.MainType>
-      )}
-      {type === "title" && <Styled.TitleType>{children}</Styled.TitleType>}
-      {type === "button" && (
-        <Styled.ButtonType className="hoverable">{children}</Styled.ButtonType>
-      )}
-      {type === "text" && <Styled.TextTitle>{children}</Styled.TextTitle>}
-      {type === "card" && (
-        <Styled.CardType active={active}>{children}</Styled.CardType>
-      )}
-      {type === "quality-card" && (
-        <Styled.QualityType>{children}</Styled.QualityType>
-      )}
-    </Styled.Container>
+    <Styled.Title
+      as={as}
+      size={size}
+      color={color}
+      weight={weight}
+      align={align}
+      uppercase={uppercase}
+      capitalize={capitalize}
+      textShadow={textShadow}
+      letterSpacing={letterSpacing}
+      className={work_sans.className}
+    >
+      {children}
+    </Styled.Title>
   );
 };
 
 Typography.propTypes = {
-  type: P.oneOf([
-    "text-uppercase",
-    "title",
-    "button",
-    "text",
-    "card",
-    "quality-card",
+  children: P.node.isRequired,
+  color: P.oneOf([
+    "blueColor",
+    "pinkColor",
+    "pinkSubColor",
+    "whiteColor",
+    "blackColor",
   ]),
-  children: P.node,
-  className: P.string,
-  active: P.bool,
+  as: P.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"]),
+  size: P.oneOf([
+    "xxxsmall",
+    "xxsmall",
+    "xsmall",
+    "small",
+    "medium",
+    "large",
+    "xlarge",
+    "xxlarge",
+    "huge",
+    "xhuge",
+  ]),
+  weight: P.oneOf(["400", "500", "600", "700"]),
+  uppercase: P.bool,
+  capitalize: P.bool,
+  align: P.string,
+  textShadow: P.string,
+  letterSpacing: P.string,
 };

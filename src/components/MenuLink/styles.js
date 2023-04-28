@@ -2,16 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
   ${({ theme }) => css`
-  color: #fff;
   display: block;
-  font-size: 0.875rem;
-  padding: 1.25rem;
   font-weight: 600;
   position: relative;
+  font-size: 0.875rem;
   text-decoration: none;
+  padding: ${theme.spacings.xsmall};
+  color: ${theme.colors.whiteColor};
 
   &:hover{
-    color: #2596be;
+    color: ${theme.colors.blueColor};
   }
 
   &::after {
@@ -21,8 +21,8 @@ export const Container = styled.a`
     height: 0.2rem;
     bottom: 0.75rem;
     position: absolute;
-    background: #2596be;
     transition: all 300ms ease-in-out;
+    background: ${theme.colors.blueColor};
   }
 
   &:hover::after {

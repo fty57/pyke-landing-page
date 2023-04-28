@@ -2,15 +2,16 @@ import { theme } from "../styles/theme";
 import { ThemeProvider } from "styled-components";
 import cards from "../utils/mock-cards";
 import qualityCards from "../utils/mock-quality-cards";
+import WallPaper from "../../public/img/wallpaper.jpg";
 
 import { Button } from "../components/Button";
 import { Divider } from "../components/Divider";
 import { Typography } from "../components/Typography";
-import { Typography2 } from "../components/Typography2";
 import { AccountCard } from "../components/AccountCard";
 
+import { Input } from "../components/Input";
 import { Footer } from "../components/Footer";
-import { TopContainer } from "../components/TopContainer";
+import { Navbar } from "../components/Navbar";
 import { SectionContainer } from "../components/SectionContainer";
 import { BackgroundContainer } from "../components/BackgroundContainer";
 
@@ -21,21 +22,26 @@ import { QualityContainer } from "../components/QualityContainer";
 import { QualityCard } from "../components/QualityCard";
 import { NameCard } from "../components/NameCard";
 import { NameContainer } from "../components/NameContainer";
+import { AboutContainer } from "../components/AboutContainer";
+import { InputContainer } from "../components/InputContainer";
 
 export default function Home() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <TopContainer />
-        <SectionContainer>
-          <BackgroundContainer
-            opacity="0.25"
-            width="100%"
-            height="50rem"
-            imgUrl="https://i.pinimg.com/originals/fa/e1/1a/fae11a396752675907689eb268785a9a.png"
-            bgColor="#000"
-          >
-            <Typography2
+        <Navbar />
+
+        <BackgroundContainer
+          id="home"
+          shadowEffect
+          width="100%"
+          opacity="0.50"
+          height="50rem"
+          bgColor="#252525"
+          imgUrl="https://i.pinimg.com/originals/fa/e1/1a/fae11a396752675907689eb268785a9a.png"
+        >
+          <SectionContainer>
+            <Typography
               as="h2"
               size="medium"
               weight="500"
@@ -43,8 +49,8 @@ export default function Home() {
               uppercase
             >
               Buy a league of
-            </Typography2>
-            <Typography2
+            </Typography>
+            <Typography
               as="h2"
               size="xlarge"
               weight="600"
@@ -54,11 +60,11 @@ export default function Home() {
               letterSpacing="1rem"
             >
               Legends Account
-            </Typography2>
+            </Typography>
             <Divider />
             <div style={{ padding: "1.25rem" }}>
               <Button size="medium">
-                <Typography2
+                <Typography
                   as="h4"
                   size="xsmall"
                   weight="500"
@@ -66,23 +72,23 @@ export default function Home() {
                   capitalize
                 >
                   Order Now
-                </Typography2>
+                </Typography>
               </Button>
             </div>
-          </BackgroundContainer>
-        </SectionContainer>
+          </SectionContainer>
+        </BackgroundContainer>
 
-        <SectionContainer spacings="medium">
+        <SectionContainer id="accounts" spacings="huge">
           <div style={{ marginBottom: "1.75rem" }}>
-            <Typography2
+            <Typography
               as="h2"
-              weight="500"
-              color="whiteColor"
-              size="medium"
               capitalize
+              weight="500"
+              size="medium"
+              color="whiteColor"
             >
               Choose Your Account
-            </Typography2>
+            </Typography>
           </div>
           <AccountContainer>
             {cards.map(
@@ -102,35 +108,38 @@ export default function Home() {
           </AccountContainer>
         </SectionContainer>
 
-        <SectionContainer>
-          <Typography2
-            as="h2"
-            weight="500"
-            color="whiteColor"
-            size="medium"
-            capitalize
-          >
-            Choose Your Account
-          </Typography2>
-          <Typography2
-            as="h2"
-            weight="500"
-            color="whiteColor"
-            size="xsmall"
-            capitalize
-          >
-            Here at AsslyELO, we care a lot about quality. We make sure you are
-            100% satisfied with our service, from payment to the actual LOL
-            accounts you receive.
-          </Typography2>
-          <BackgroundContainer
-            shadowEffect
-            width="100%"
-            height="100%"
-            opacity="0.50"
-            bgColor="#000"
-            imgUrl="https://static1-br.millenium.gg/entity_articles/9/67/69/@/135550-splash-art-de-pantheon-cacador-de-dragoes-imagem-riot-gamesdivulgacao-full-1.jpg"
-          >
+        <BackgroundContainer
+          shadowEffect
+          width="100%"
+          height="100%"
+          opacity="0.65"
+          bgColor="#252525"
+          imgUrl="https://static1-br.millenium.gg/entity_articles/9/67/69/@/135550-splash-art-de-pantheon-cacador-de-dragoes-imagem-riot-gamesdivulgacao-full-1.jpg"
+        >
+          <SectionContainer spacings="huge">
+            <div style={{ marginBottom: "1.75rem" }}>
+              <Typography
+                as="h2"
+                capitalize
+                weight="500"
+                size="medium"
+                color="whiteColor"
+              >
+                Why you should buy from us
+              </Typography>
+            </div>
+            <Typography
+              as="h2"
+              capitalize
+              weight="500"
+              size="xsmall"
+              color="whiteColor"
+            >
+              Here at AsslyELO, we care a lot about quality. We make sure you
+              are 100% satisfied with our service, from payment to the actual
+              LOL accounts you receive.
+            </Typography>
+
             <QualityContainer>
               {qualityCards.map(({ title, imgUrl, description }, index) => {
                 return (
@@ -143,216 +152,257 @@ export default function Home() {
                 );
               })}
             </QualityContainer>
-          </BackgroundContainer>
-        </SectionContainer>
+          </SectionContainer>
+        </BackgroundContainer>
 
-        <SectionContainer>
-          <Typography2
-            as="h2"
-            weight="500"
-            color="whiteColor"
-            size="medium"
-            capitalize
-          >
-            Why Buy League of Legends Account
-          </Typography2>
-          <div style={{ width: "100%", height: "100%", display: "flex" }}>
-            <BackgroundContainer
-              shadowEffect
-              opacity="0.75"
-              width="150%"
-              height="100%"
-              imgUrl="https://static1-br.millenium.gg/entity_articles/7/67/97/@/142281-imagem-2022-11-09-100952311-full-1.png"
-              bgColor="#000"
+        <BackgroundContainer
+          id="about"
+          shadowEffect
+          width="100%"
+          height="100%"
+          opacity="0.75"
+          bgColor="#252525"
+          imgUrl="https://static1-br.millenium.gg/entity_articles/7/67/97/@/142281-imagem-2022-11-09-100952311-full-1.png"
+        >
+          <SectionContainer spacings="huge">
+            <Typography
+              as="h2"
+              capitalize
+              weight="500"
+              size="medium"
+              color="whiteColor"
             >
-              <ColumnText title="STILL UNDECIDED ?">
-                <Typography2
-                  as="p"
-                  color="whiteColor"
-                  size="xsmall"
-                  weight="500"
-                  capitalize
-                >
-                  Because we care about you, we waant to make sure that you know
-                  exactly the benefits whe you buy a League of Legends account.
-                </Typography2>
-                <Typography2
-                  as="p"
-                  color="whiteColor"
-                  size="xsmall"
-                  weight="500"
-                  capitalize
-                >
-                  The most obvious benefit is that you dont have to work your
-                  way up from level 1 to level 30 again. Depending on your
-                  experience and skill, that can take a few days or a couple of
-                  weeks. With a level 30 smurf account, you can jump right into
-                  the action with a high-level account from Day 1.
-                </Typography2>
-                <Typography2
-                  as="p"
-                  color="whiteColor"
-                  size="xsmall"
-                  weight="500"
-                  capitalize
-                >
-                  In League of Legends, the ELO system prevents hight-level
-                  players from fighting alongside low-level players. This means
-                  high-level players cant play with and show the ropes to the
-                  real life friends who are just starting out. But with a
-                  unkanked smurf account, that becoms possible.
-                </Typography2>
-                <Divider />
-                <Typography2
-                  as="p"
-                  color="whiteColor"
-                  size="xsmall"
-                  weight="500"
-                  capitalize
-                >
-                  Experience is the best teacher. Sadly, practice new Champions
-                  and diferentes roles during real matches can become ugly and
-                  will affect your reputation. The soluction? Use a LOL smurf
-                  account to experiment with new Champions, equipment builds,
-                  strategies, and roles.
-                </Typography2>
-                <Typography2
-                  as="p"
-                  color="whiteColor"
-                  size="xsmall"
-                  weight="500"
-                  capitalize
-                >
-                  Lastly, with a level 30 smuth account, you can take a break
-                  from the fience competition in hight ELO and go back to simply
-                  having fun, even if you are playing with and agains
-                  inexperience players. Everyone deserves a breake every now and
-                  then.
-                </Typography2>
-              </ColumnText>
-            </BackgroundContainer>
-          </div>
-        </SectionContainer>
+              Why Buy League of Legends Account
+            </Typography>
+            <ColumnText title="STILL UNDECIDED ?">
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                Because we care about you, we waant to make sure that you know
+                exactly the benefits whe you buy a League of Legends account.
+              </Typography>
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                Moreover, a smurf account can come in handy when you want to
+                take a break from the competitive scene and just have some fun.
+                You can play with a more relaxed mindset, try out unconventional
+                builds, and enjoy the game without the pressure of maintaining a
+                high rank.
+              </Typography>
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                The most obvious benefit is that you dont have to work your way
+                up from level 1 to level 30 again. Depending on your experience
+                and skill, that can take a few days or a couple of weeks. With a
+                level 30 smurf account, you can jump right into the action with
+                a high-level account from Day 1.
+              </Typography>
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                In League of Legends, the ELO system prevents hight-level
+                players from fighting alongside low-level players. This means
+                high-level players cant play with and show the ropes to the real
+                life friends who are just starting out. But with a unkanked
+                smurf account, that becoms possible.
+              </Typography>
+              <Divider />
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                Experience is the best teacher. Sadly, practice new Champions
+                and diferentes roles during real matches can become ugly and
+                will affect your reputation. The soluction? Use a LOL smurf
+                account to experiment with new Champions, equipment builds,
+                strategies, and roles.
+              </Typography>
+              <Typography
+                as="p"
+                capitalize
+                weight="500"
+                size="xsmall"
+                color="whiteColor"
+              >
+                Lastly, with a level 30 smuth account, you can take a break from
+                the fience competition in hight ELO and go back to simply having
+                fun, even if you are playing with and agains inexperience
+                players. Everyone deserves a breake every now and then.
+              </Typography>
+            </ColumnText>
+          </SectionContainer>
+        </BackgroundContainer>
 
-        <SectionContainer>
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              gap: "10rem",
-              padding: "3rem 12rem",
-            }}
-          >
+        <SectionContainer id="feedbacks" spacings="huge">
+          <AboutContainer>
             <div
               style={{
                 flex: "3",
+                gap: "1rem",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                gap: "1.5rem",
               }}
             >
-              <Typography type="text-uppercase">What</Typography>
-              <Typography type="text">PEOPLE SAY</Typography>
-              <Typography type="text-uppercase">About Us</Typography>
+              <Typography
+                as="h4"
+                uppercase
+                weight="500"
+                align="left"
+                size="medium"
+                color="whiteColor"
+              >
+                What
+              </Typography>
+              <Typography
+                as="h4"
+                uppercase
+                weight="500"
+                size="small"
+                align="left"
+                color="whiteColor"
+              >
+                PEOPLE SAY
+              </Typography>
+              <Typography
+                as="h4"
+                uppercase
+                weight="500"
+                align="left"
+                size="medium"
+                color="whiteColor"
+              >
+                About Us
+              </Typography>
               <hr
                 style={{
                   left: 0,
                   width: "25%",
                   height: "0.75rem",
-                  backgroundColor: "#b444b3",
                   border: "0px solid",
                   borderRadius: "25px",
+                  backgroundColor: "#b444b3",
                 }}
               />
-              <Typography type="button">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Impedit itaque libero corporis quaerat iusto distinctio
-                voluptatum saepe, voluptas ipsam similique facilis officia
-                quidem voluptatibus dolor, et nobis culpa at sequi.
+              <Typography
+                as="p"
+                weight="500"
+                align="left"
+                size="xsmall"
+                color="whiteColor"
+              >
+                We understand that real feedback matters in your decision making
+                process. Check out what previous customers say about us!
               </Typography>
             </div>
             <NameContainer>
               <NameCard title="Rick M">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
-                laboriosam laudantium facere ratione debitis adipisci esse et
-                autem nesciunt labore numquam eos?
+                Wanted and account to duo with my silver friend who was begging
+                me! Able to have 2 full rune pages + my main champions with 1 or
+                2 champions I want to experiment with within 10 minutes. Great
+                job.
               </NameCard>
-              <NameCard title="Rick M">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
-                laboriosam laudantium facere ratione debitis adipisci esse et
-                autem nesciunt labore numquam eos?
+              <NameCard title="Stasy G">
+                Excellent customer service! Its my first time buying a League of
+                Legends account, so I had no clue about the entire process. The
+                customer support team was more than happy to help and make sure
+                I am satisfied!
               </NameCard>
-              <NameCard title="Rick M">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis ab sunt ex mollitia vero ducimus quia voluptate,
-                laboriosam laudantium facere ratione debitis adipisci esse et
-                autem nesciunt labore numquam eos?
+              <NameCard title="Michael B">
+                The account I got is really good. I have bought accounts from
+                other websites before but all or them got banned in less than 24
+                hours. No such experience with this web.
               </NameCard>
             </NameContainer>
-          </div>
+          </AboutContainer>
         </SectionContainer>
-        <SectionContainer>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
-              gap: "0.875rem",
-              paddingBottom: "16rem",
-            }}
-          >
-            <Typography type="text">Subscribe Now</Typography>
-            <div>
-              <Typography type="button">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-                pariatur atque nam, doloremque, fugiat placeat quidem ad totam
-                sapiente dicta inventore eaque! Voluptas, eveniet ipsum
-                explicabo et itaque inventore a?
+
+        <BackgroundContainer
+          id="news"
+          shadowEffect
+          width="100%"
+          opacity="0.75"
+          height="50rem"
+          bgColor="#252525"
+          imgUrl="https://steamuserimages-a.akamaihd.net/ugc/2010328424759555731/7167A3ECE235D7D7E9CDD5E866E9C556F20C22BD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+        >
+          <SectionContainer spacings="huge">
+            <AboutContainer isColumn>
+              <Typography
+                as="h2"
+                capitalize
+                weight="500"
+                size="medium"
+                color="whiteColor"
+              >
+                Subscribe Now
               </Typography>
-              <Typography type="button">
+
+              <Typography as="h3" weight="500" size="xsmall" color="whiteColor">
+                Be the first to know about our service updates and offers. Sign
+                up for our mailling list so you dont miss our on anything.
+              </Typography>
+
+              <Typography
+                as="h2"
+                uppercase
+                weight="500"
+                size="small"
+                color="blueColor"
+              >
                 Subscribe to our new Letter and be the First to Know
               </Typography>
-            </div>
-            <div
-              style={{
-                position: "relative",
-                display: "inline-block",
-              }}
-            >
-              <input
-                type="email"
-                placeholder="EMAIL"
-                style={{
-                  width: "500px",
-                  border: "0px solid",
-                  padding: "0.6875rem",
-                  borderRadius: "0.25rem",
-                  boxShadow: "inset 0px 0px 20px 20px rgba(40, 36, 36, 0.7)",
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                  height: "100%",
-                  border: "none",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-              >
-                <Button size="small">
-                  <Typography type="button">Subscribe</Typography>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </SectionContainer>
+
+              <InputContainer>
+                <Input type="email" placeholder="EMAIL" />
+                <div
+                  style={{
+                    top: 0,
+                    right: 0,
+                    height: "100%",
+                    border: "none",
+                    cursor: "pointer",
+                    borderRadius: "4px",
+                  }}
+                >
+                  <Button size="medium">
+                    <Typography
+                      as="h4"
+                      capitalize
+                      weight="500"
+                      size="xxsmall"
+                      color="whiteColor"
+                    >
+                      Subscribe
+                    </Typography>
+                  </Button>
+                </div>
+              </InputContainer>
+            </AboutContainer>
+          </SectionContainer>
+        </BackgroundContainer>
+
         <Footer />
       </ThemeProvider>
     </>

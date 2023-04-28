@@ -13,7 +13,7 @@ export const Accordion = ({ title, children }) => {
   return (
     <Styled.AccordionContainer>
       <Styled.AccordionHeader onClick={toggleAccordion}>
-        <Typography type="card" active={isOpen}>
+        <Typography weight="500" size="small" color="whiteColor">
           {title}
         </Typography>
         {isOpen ? "-" : "+"}

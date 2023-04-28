@@ -3,9 +3,11 @@ import { Chat } from "@styled-icons/bootstrap/Chat";
 import { theme } from '../../styles/theme'
 
 export const BlueChat = styled(Chat)`
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #2596be;
+  ${({ theme }) => css`
+    width: ${theme.spacings.small};
+    height: ${theme.spacings.small};
+    color: ${theme.colors.blueColor};
+  `};
 `;
 
 export const Container = styled.div`
@@ -13,7 +15,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: ${theme.spacings.small};
   `}
 `;
 

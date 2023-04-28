@@ -4,7 +4,6 @@ import * as Styled from "./styles";
 import { Button } from "../Button";
 import { Accordion } from "../Accordion";
 import { Typography } from "../Typography";
-import { Typography2 } from "../Typography2";
 import { BackgroundContainer } from "../BackgroundContainer";
 
 export const AccountCard = ({
@@ -33,7 +32,7 @@ export const AccountCard = ({
             }}
           >
             <Styled.TopTip>
-              <Typography2
+              <Typography
                 as="h3"
                 color="whiteColor"
                 weight="500"
@@ -41,10 +40,10 @@ export const AccountCard = ({
                 uppercase
               >
                 {nationality}
-              </Typography2>
+              </Typography>
             </Styled.TopTip>
             <Styled.PriceContainer>
-              <Typography2
+              <Typography
                 as="h4"
                 color="whiteColor"
                 size="xsmall"
@@ -52,11 +51,11 @@ export const AccountCard = ({
                 capitalize
               >
                 Starting at {price}$
-              </Typography2>
+              </Typography>
             </Styled.PriceContainer>
             <Styled.ButtonContainer>
               <Button size="small">
-                <Typography2
+                <Typography
                   as="h4"
                   color="whiteColor"
                   size="xsmall"
@@ -64,13 +63,13 @@ export const AccountCard = ({
                   capitalize
                 >
                   Order Now
-                </Typography2>
+                </Typography>
               </Button>
             </Styled.ButtonContainer>
           </div>
         </BackgroundContainer>
         <Accordion title="Detailed information">
-          <Typography2
+          <Typography
             as="p"
             color="whiteColor"
             size="xxsmall"
@@ -78,7 +77,7 @@ export const AccountCard = ({
             capitalize
           >
             {description}
-          </Typography2>
+          </Typography>
         </Accordion>
       </Styled.Card>
     </Styled.Container>

@@ -2,16 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 0.1875rem;
   display: flex;
+  height: 0.25rem;
+  padding: 1rem 0rem;
   justify-content: center;
-  padding: 1rem 0;
 `;
 
 export const Divider = styled.hr`
-  ${({ width }) => css`  
-  width: ${width ? width : '35%'};
-  background-color: #fff;
-  border-radius: 25px;
+  ${({ width, theme }) => css`  
+    border-radius: 1.5rem;
+    width: ${width ? width : '35%'};
+    background-color: ${theme.colors.whiteColor};
   `}
 `

@@ -7,7 +7,12 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     ${spacingCase(theme, spacings)}
+
+    @media ${theme.breakpoints.medium}{
+      padding: ${theme.spacings.xxxsmall}
+    }
   `}
 `;

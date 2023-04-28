@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 import { Container as SectionMenuContainer } from '../SectionMenuContainer/styles';
 
 const menuVisible = () => css`
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 `;
 
 export const Container = styled.div`
@@ -14,8 +14,8 @@ export const Container = styled.div`
     z-index: 5;
     width: 100%;
     position: fixed;
-    background: ${theme.colors.blackColor};
     transition: all 300ms ease-in-out;
+    background: ${theme.colors.blackColor};
 
     > ${SectionMenuContainer} {
       padding-top: 0;
@@ -23,18 +23,18 @@ export const Container = styled.div`
     }
 
     @media ${theme.breakpoints.medium} {
+      opacity: 0;
       height: 100vh;
       visibility: hidden;
-      opacity: 0;
 
       ${visible && menuVisible(theme)}
       > ${SectionMenuContainer} {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
         height: 100vh;
-        align-items: center;
         overflow-y: auto;
+        align-items: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
       }
     }
   `}
@@ -57,13 +57,13 @@ export const MenuContainer = styled.div`
 export const Button = styled.button`
   ${({ theme, visible }) => css`
     z-index: 6;
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 3rem;
-    height: 3rem;
     border: none;
     display: none;
     position: fixed;
+    top: ${theme.spacings.tiny};
+    right: ${theme.spacings.tiny};
+    width: ${theme.spacings.large};
+    height: ${theme.spacings.large};
     color: ${theme.colors.whiteColor};
     background:  ${theme.colors.blackColor};
     pointer-events: ${visible ? 'none' : 'all'};
@@ -75,8 +75,8 @@ export const Button = styled.button`
     }
 
     > svg {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: ${theme.spacings.medium};
+      height: ${theme.spacings.medium};
     }
   `}
 `;

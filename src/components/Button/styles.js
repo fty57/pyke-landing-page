@@ -9,13 +9,13 @@ export const Container = styled.div`
 export const ButtonMedium = styled.button`
   ${({ theme }) => css`
   border: 0px;
-  padding: 0.75rem 50px;
+  padding: 0.75rem 3rem;
   border-radius: 0.625rem;
-  background-color: #b444b3;
+  background-color: ${theme.colors.pinkColor};
   box-shadow: inset 0px -10px 15px 10px rgba(0, 0, 0, 0.2);
 
   &:hover{
-    background-color: #d96cd1;
+    background-color: ${theme.colors.pinkSubColor};
   }
   `}
 `;
@@ -23,17 +23,17 @@ export const ButtonMedium = styled.button`
 export const ButtonSmall = styled.button`
   ${({ theme }) => css`
   border: 0px;
-  padding: 0.5rem 25px;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.625rem;
-  background-color: #b444b3;
+  background-color: ${theme.colors.pinkColor};
   box-shadow: inset 0px -10px 15px 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background-color: #fffcfc;
+    background-color: ${theme.colors.blackColor};
   }
 
   &:hover .hoverable {
-      color: #20dce4;
+      color: ${theme.colors.blueColor};
     }
   `}
 `;

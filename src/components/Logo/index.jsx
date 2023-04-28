@@ -1,13 +1,13 @@
 import P from "prop-types";
 import * as Styled from "./styles";
-import { Typography2 } from "../Typography2";
+import { Typography } from "../Typography";
 
 export const Logo = ({ text }) => {
   return (
     <Styled.Container>
-      <Typography2 color="blueColor" weight="600" size="small" uppercase>
+      <Typography color="blueColor" weight="600" size="small" uppercase>
         {text}
-      </Typography2>
+      </Typography>
     </Styled.Container>
   );
 };

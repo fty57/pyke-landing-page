@@ -5,28 +5,33 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  ${({ price, nationality, description }) => css`
+  ${({ theme, price, nationality, description }) => css`
     width: 25rem;
-    background-color: #282424;
+    background-color: ${theme.colors.blackColor};
   `}
 `
 
 export const TopTip = styled.div`
+${({ theme }) => css`
   width: 30%;
   height: 100%;
   display: flex;
-  padding: 0.5rem;
   position: relative;
   justify-content: center;
-  background-color: #20dce4;
   border-radius: 0px 5px 5px 0px;
+  padding: ${theme.spacings.tiny};
+  background-color: ${theme.colors.blueColor};
+`};
+
 `
 
 export const PriceContainer = styled.div`
+${({ theme }) => css`
   width: 100%;
   display: flex;
-  padding: 1rem;
+  padding: ${theme.spacings.xxsmall};
   justify-content: center;
+`};
 `
 
 export const ButtonContainer = styled.div`

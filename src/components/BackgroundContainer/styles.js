@@ -18,7 +18,7 @@ export const BackgroundImage = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${imgUrl});
-  box-shadow: ${shadowEffect ? "inset 0px 25px 100px 100px rgba(0,0,0, 1)" : "inset 0px 20px 20px 20px rgba(0,0,0,0.5)"};
+  box-shadow: ${shadowEffect ? "inset 0px 50px 50px -30px rgba(0,0,0,1), inset 0px -50px 50px -30px rgba(0,0,0,1)" : "inset 0px 20px 20px 20px rgba(37,37,37,0.5)"};
   `}
 `;
 

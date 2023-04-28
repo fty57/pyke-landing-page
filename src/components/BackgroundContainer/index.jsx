@@ -3,6 +3,7 @@ import * as Styled from "./styles";
 import styled from "styled-components";
 
 export const BackgroundContainer = ({
+  id,
   width,
   height,
   imgUrl,
@@ -12,7 +13,7 @@ export const BackgroundContainer = ({
   shadowEffect,
 }) => {
   return (
-    <Styled.Container width={width} height={height}>
+    <Styled.Container id={id} width={width} height={height}>
       <Styled.BackgroundImage imgUrl={imgUrl} shadowEffect={shadowEffect}>
         <Styled.BackgroundText>{children}</Styled.BackgroundText>
       </Styled.BackgroundImage>
@@ -22,6 +23,7 @@ export const BackgroundContainer = ({
 };
 
 BackgroundContainer.propTypes = {
+  id: P.string,
   width: P.string.isRequired,
   height: P.string.isRequired,
   imgUrl: P.string.isRequired,

@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components';
 
 const spacingCase = (theme, spacings) => {
   switch (spacings) {
+    case 'tiny':
+      return css`padding: ${theme.spacings.tiny};`
+      break;
+
     case 'xxxsmall':
       return css`padding: ${theme.spacings.xxxsmall};`
       break;

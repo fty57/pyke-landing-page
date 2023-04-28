@@ -29,7 +29,7 @@ export const Menu = ({ links = [] }) => {
       <Styled.Container visible={visible} onClick={() => setVisible(false)}>
         <SectionMenuContainer>
           <Styled.MenuContainer>
-            <Logo text="Logo" />
+            <Logo text="ASLLYELO" />
             <NavLinks links={links} />
             <Blog text="Blog" />
           </Styled.MenuContainer>
