@@ -1,9 +1,14 @@
 import P from "prop-types";
 import * as Styled from "./styles";
 
-export const SectionContainer = ({ children, spacings = "xxsmall", id }) => {
+export const SectionContainer = ({
+  children,
+  spacings = "xxsmall",
+  id,
+  isBgColor,
+}) => {
   return (
-    <Styled.Container id={id} spacings={spacings}>
+    <Styled.Container id={id} spacings={spacings} isBgColor={isBgColor}>
       {children}
     </Styled.Container>
   );
@@ -24,4 +29,5 @@ SectionContainer.propTypes = {
     "huge",
     "xhuge",
   ]),
+  isBgColor: P.bool,
 };

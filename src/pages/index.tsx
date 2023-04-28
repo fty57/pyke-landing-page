@@ -78,7 +78,7 @@ export default function Home() {
           </SectionContainer>
         </BackgroundContainer>
 
-        <SectionContainer id="accounts" spacings="huge">
+        <SectionContainer id="accounts" spacings="huge" isBgColor>
           <div style={{ marginBottom: "1.75rem" }}>
             <Typography
               as="h2"
@@ -254,7 +254,7 @@ export default function Home() {
           </SectionContainer>
         </BackgroundContainer>
 
-        <SectionContainer id="feedbacks" spacings="huge">
+        <SectionContainer id="feedbacks" spacings="huge" isBgColor>
           <AboutContainer>
             <div
               style={{
